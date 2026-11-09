@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+
+    <title>Autor cadastrado</title>
+</head>
+<body>
+
+<nav>
+    <a class="botao secundario" th:href="@{/livros}">Livros</a>
+    <a class="botao" th:href="@{/livros/novo}">Cadastrar Livro</a>
+    <a class="botao" th:href="@{/autores/novo}">Cadastrar Autor</a>
+</nav>
+
+<main>
+
+<h1>Autor cadastrado!</h1>
+
+<p>Nome:
+    <span th:text="${autor.nome}"></span>
+</p>
+
+<p>Nacionalidade:
+    <span th:text="${autor.nacionalidade}"></span>
+</p>
+
+<a class="botao" th:href="@{/autores/novo}">Cadastrar outro autor</a>
+
+</main>
+
+</body>
+</html>
